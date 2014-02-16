@@ -9,8 +9,12 @@
     <link href="{{ static_url('css/show.css') }}" rel="stylesheet">
 </head>
 <body>
+<!-- AUDIOS -->
+<audio src="{{ static_url('audio/opening.mp3') }}" id="opening" preload="auto"></audio>
+<!-- CÉU ESTRELADO -->
+<div class="stars" id="stars"></div>
+<!-- ESTADO 1 -->
 <div class="state" id="st1">
-    <div class="stars"></div>
     <h1>{{ ip }}:{{ port }}</h1>
     <p id="startMessage">Aguardando embarque da tripulação</p>
     <div>
@@ -22,6 +26,22 @@
         <div class="tripulante" id="trp6">6</div>
         <div class="tripulante" id="trp7">7</div>
         <div class="tripulante" id="trp8">8</div>
+    </div>
+</div>
+<!-- ESTADO 2 -->
+<div class="state" id="st2">
+    <h1 id="contagem"></h1>
+</div>
+<!-- ESTADO 3 -->
+<div class="state" id="st3">
+    <div id="opening-scene">
+        <div class="stars"></div>
+        <div class="sun"></div>
+        <div class="earth"></div>
+        <div class="moon"></div>
+        <div class="frase1">ENCONTRO DE COMPARTILHAMENTO DO CONHECIMENTO</div>
+        <div class="frase2">LUIZ FERNANDO DA SILVA</div>
+        <div class="titulo">2014:&nbsp;&nbsp;&nbsp;UMA&nbsp;&nbsp;&nbsp;ODISSÉIA&nbsp;&nbsp;&nbsp;NA&nbsp;&nbsp;&nbsp;WEB</div>
     </div>
 </div>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>

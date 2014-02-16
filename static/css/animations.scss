@@ -1,0 +1,30 @@
+@-webkit-keyframes sky {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes sun {
+  from {
+    top: 40%;
+    left: 50%;
+    box-shadow: 0 0 200px 10px #C46562;
+    background: #DAA2A5;
+  }
+  to {
+    top: 24%;
+    left: 51%;
+    box-shadow: 0 0 100px 5px #DAA2A5;
+    background: #E5DFDB;
+  }
+}
+@-webkit-keyframes moon {
+  from {
+    top: 30%;
+  }
+  to {
+    top: 150%;
+  }
+}

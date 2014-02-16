@@ -1,16 +1,10 @@
-@-webkit-keyframes sky {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic|Cabin);
+@import 'animations';
 
 body {
   background: #000;
   color: #fff;
-  font-family: "Helvetic Neue", Helvetica, Arial;
+  font-family: Lato,"Helvetic Neue", Helvetica, Arial;
   font-size: 4rem;
   overflow: hidden;
 }
@@ -21,14 +15,8 @@ body {
   top: -50%;
   left: -50%;
   z-index: -1;
-  -webkit-animation-name: sky;
-  -webkit-animation-duration: 500s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation: sky 500s infinite linear;
   background: #000 url('../img/starsky.png') center repeat;
-  color: #fff;
-  font-family: "Helvetic Neue", Helvetica, Arial;
-  font-size: 4rem;
 }
 
 .state {

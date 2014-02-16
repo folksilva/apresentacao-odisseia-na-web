@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic|Cabin);
 @-webkit-keyframes sky {
   from {
     -webkit-transform: rotate(0deg); }
@@ -5,10 +6,30 @@
   to {
     -webkit-transform: rotate(360deg); } }
 
+@-webkit-keyframes sun {
+  from {
+    top: 40%;
+    left: 50%;
+    box-shadow: 0 0 200px 10px #C46562;
+    background: #DAA2A5; }
+
+  to {
+    top: 24%;
+    left: 51%;
+    box-shadow: 0 0 100px 5px #DAA2A5;
+    background: #E5DFDB; } }
+
+@-webkit-keyframes moon {
+  from {
+    top: 30%; }
+
+  to {
+    top: 150%; } }
+
 body {
   background: #000;
   color: #fff;
-  font-family: "Helvetic Neue", Helvetica, Arial;
+  font-family: Lato,"Helvetic Neue", Helvetica, Arial;
   font-size: 4rem;
   overflow: hidden; }
 
@@ -19,14 +40,8 @@ body {
   top: -50%;
   left: -50%;
   z-index: -1;
-  -webkit-animation-name: sky;
-  -webkit-animation-duration: 500s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  background: black url("../img/starsky.png") center repeat;
-  color: #fff;
-  font-family: "Helvetic Neue", Helvetica, Arial;
-  font-size: 4rem; }
+  -webkit-animation: sky 500s infinite linear;
+  background: black url("../img/starsky.png") center repeat; }
 
 .state {
   display: none;
@@ -35,6 +50,9 @@ body {
   left: 0px;
   bottom: 0px;
   right: 0px; }
+
+.stars {
+  display: none; }
 
 #st1 {
   text-align: center; }
@@ -56,3 +74,69 @@ body {
     opacity: 1;
     background: #FFF;
     color: #222; }
+
+#st2 {
+  text-align: center; }
+  #st2 h1 {
+    font-size: 20rem; }
+
+#st3 {
+  text-align: center; }
+  #st3 .stars {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    -webkit-animation: none;
+    background: black url("../img/starsky.png") center repeat;
+    display: block; }
+  #st3 #opening-scene {
+    display: none; }
+  #st3 .frase1, #st3 .frase2, #st3 .titulo {
+    font-family: Lato;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    display: none; }
+  #st3 .titulo {
+    font-size: 6rem;
+    font-weight: 300; }
+  #st3 .sun {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 100px 5px #DAA2A5;
+    background: #E5DFDB;
+    left: 50%;
+    margin-left: -40px;
+    top: 50%;
+    margin-top: -40px; }
+  #st3 .sun.animated {
+    -webkit-animation: sun 105s linear; }
+  #st3 .earth {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background: url("../img/terra.png") center no-repeat;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -150px; }
+  #st3 .moon {
+    position: absolute;
+    width: 1900px;
+    height: 1900px;
+    border-radius: 950px;
+    background: url("../img/moon.png") center no-repeat;
+    left: 50%;
+    margin-left: -950px;
+    top: 110%; }
+  #st3 .moon.animated {
+    -webkit-animation: moon 105s linear; }

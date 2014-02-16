@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic|Cabin);
 @-webkit-keyframes sky {
   from {
     -webkit-transform: rotate(0deg); }
@@ -5,10 +6,30 @@
   to {
     -webkit-transform: rotate(360deg); } }
 
+@-webkit-keyframes sun {
+  from {
+    top: 40%;
+    left: 50%;
+    box-shadow: 0 0 200px 10px #C46562;
+    background: #DAA2A5; }
+
+  to {
+    top: 24%;
+    left: 51%;
+    box-shadow: 0 0 100px 5px #DAA2A5;
+    background: #E5DFDB; } }
+
+@-webkit-keyframes moon {
+  from {
+    top: 30%; }
+
+  to {
+    top: 150%; } }
+
 body {
   background: #000;
   color: #fff;
-  font-family: "Helvetic Neue", Helvetica, Arial;
+  font-family: Lato,"Helvetic Neue", Helvetica, Arial;
   font-size: 4rem;
   overflow: hidden; }
 
@@ -19,14 +40,8 @@ body {
   top: -50%;
   left: -50%;
   z-index: -1;
-  -webkit-animation-name: sky;
-  -webkit-animation-duration: 500s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  background: black url("../img/starsky.png") center repeat;
-  color: #fff;
-  font-family: "Helvetic Neue", Helvetica, Arial;
-  font-size: 4rem; }
+  -webkit-animation: sky 500s infinite linear;
+  background: black url("../img/starsky.png") center repeat; }
 
 .state {
   display: none;

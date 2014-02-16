@@ -47,7 +47,10 @@ class Control(tornado.websocket.WebSocketHandler):
         STATE = 1
 
     def on_message(self, message):
-        print(message)
+        global STATE
+        STATE = int(message)
+        for viewer in VIEWERS:
+            viewer.write_message("%s" % STATE)
 
     def on_close(self):
         global PRESENTER, STATE

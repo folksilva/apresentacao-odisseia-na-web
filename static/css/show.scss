@@ -1,5 +1,5 @@
 @import 'core';
-
+.stars { display: none; }
 #st1 {
   text-align: center;
   h1 {
@@ -22,5 +22,83 @@
     opacity: 1;
     background: #FFF;
     color: #222;
+  }
+}
+
+#st2 {
+  text-align: center;
+  h1 {
+    font-size: 20rem;
+  }
+}
+
+#st3 {
+  text-align: center;
+  .stars {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    -webkit-animation: none;
+    background: #000 url('../img/starsky.png') center repeat;
+    display: block;
+  }
+  #opening-scene {
+    display: none;
+  }
+  .frase1, .frase2, .titulo {
+    font-family: Lato;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    display: none;
+  }
+  .titulo {
+    font-size: 6rem;
+    font-weight: 300;
+  }
+  .sun {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 100px 5px #DAA2A5;
+    background: #E5DFDB;
+    left: 50%;
+    margin-left: -40px;
+    top: 50%;
+    margin-top: -40px;
+  }
+  .sun.animated {
+    -webkit-animation: sun 105s linear;
+  }
+  .earth {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background: url('../img/terra.png') center no-repeat;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -150px;
+  }
+  .moon {
+    position: absolute;
+    width: 1900px;
+    height: 1900px;
+    border-radius: 950px;
+    background: url('../img/moon.png') center no-repeat;
+    left: 50%;
+    margin-left: -950px;
+    top: 110%;
+  }
+  .moon.animated {
+    -webkit-animation: moon 105s linear;
   }
 }
