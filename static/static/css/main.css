@@ -1,0 +1,13 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Helvetic Neue", Helvetica, Arial;
+  font-size: 4rem; }
+
+.state {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px; }

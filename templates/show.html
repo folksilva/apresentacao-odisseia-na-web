@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <title>2014: Uma Odisséia na Web</title>
+    <meta name="description" content="Apresentação interativa sobre a história da web para o Encontro de Compartilhamento de Conhencimento da equipe de tecnologia da informação do Sport Club Crointhians Paulista">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link href="{{ static_url('css/show.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="state" id="st1">
+    <div class="stars"></div>
+    <h1>{{ ip }}:{{ port }}</h1>
+    <p id="startMessage">Aguardando embarque da tripulação</p>
+    <div>
+        <div class="tripulante" id="trp1">1</div>
+        <div class="tripulante" id="trp2">2</div>
+        <div class="tripulante" id="trp3">3</div>
+        <div class="tripulante" id="trp4">4</div>
+        <div class="tripulante" id="trp5">5</div>
+        <div class="tripulante" id="trp6">6</div>
+        <div class="tripulante" id="trp7">7</div>
+        <div class="tripulante" id="trp8">8</div>
+    </div>
+</div>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{{ static_url('js/show.js') }}"></script>
+</body>
+</html>

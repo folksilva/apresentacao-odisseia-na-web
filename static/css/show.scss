@@ -1,0 +1,26 @@
+@import 'core';
+
+#st1 {
+  text-align: center;
+  h1 {
+    font-size: 8rem;
+  }
+  .tripulante {
+    opacity: 0.3;
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    transition: all 1s linear;
+    background: #222;
+    color: #000;
+  }
+  .tripulante.on {
+    opacity: 1;
+    background: #FFF;
+    color: #222;
+  }
+}
