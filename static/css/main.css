@@ -30,7 +30,7 @@ body {
   background: #000;
   color: #fff;
   font-family: Lato,"Helvetic Neue", Helvetica, Arial;
-  font-size: 4rem;
+  font-size: 3rem;
   overflow: hidden; }
 
 .stars {
@@ -50,3 +50,6 @@ body {
   left: 0px;
   bottom: 0px;
   right: 0px; }
+
+.centered {
+  text-align: center; }

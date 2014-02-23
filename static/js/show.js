@@ -49,6 +49,7 @@ var handlers = {
     }
 };
 
+function voidfn (){}
 function state1() {
     setTimeout(function(){$('#st1').fadeIn('slow');}, 1000);
 }
@@ -104,11 +105,72 @@ function state3() {
        });
     });
 }
+
+function state4 (){
+    $('#st4 h1').fadeIn(3*1000, function(){
+        setTimeout(function(){
+            $('#st4 h1').fadeOut(2*1000, function(){
+                nextState();
+            });
+        }, 5 * 1000);
+    });
+}
+
+function state5 () {
+    setTimeout(function(){
+        $('#st5 #p1').fadeIn('slow', function(){
+            setTimeout(function(){
+                $('#st5 #p2').fadeIn('slow', function(){
+                    setTimeout(function(){
+                        $('#st5 #p3').fadeIn('slow');
+                    }, 5 * 1000);
+                });
+            }, 3 * 1000);
+        });
+    }, 1000);
+}
+
+function state6 () {
+    setTimeout(function(){
+        $('#st6 #memex').fadeIn('slow', function(){
+            setTimeout(function(){
+                $('#st6 #hypertexto').fadeIn('slow');
+            }, 8*1000);
+        });
+    }, 1000);
+}
+
+function state7 () {
+    setTimeout(function(){
+        $('#st7 h2, #st7 img').fadeIn('slow', function(){
+            setTimeout(function(){$('#st7 #p1').fadeIn('slow');}, 1 * 1000);
+            setTimeout(function(){$('#st7 #p2').fadeIn('slow');}, 5 * 1000);
+            setTimeout(function(){$('#st7 #p3').fadeIn('slow');}, 10 * 1000);
+            setTimeout(function(){$('#st7 #p4').fadeIn('slow');}, 18 * 1000);
+            setTimeout(function(){$('#st7 #p5').fadeIn('slow');}, 20 * 1000);
+        });
+    }, 1000);
+}
+function state9 () {
+     $('#st9 h1').fadeIn(3*1000, function(){
+        setTimeout(function(){
+            $('#st9 h1').fadeOut(2*1000, function(){
+                nextState();
+            });
+        }, 5 * 1000);
+    });
+}
+function state10 () {}
+function state11 () {}
+function state12 () {}
+
 /**
  * Lista de estados com ações a serem executadas
  * @type {[]}
  */
-var states = [null, state1, state2, state3];
+var states = [null, state1, state2, state3,
+    state4, state5, state6, state7, voidfn,
+    state9, state10, state11, state12];
 function runState(){
     ws.send(state);
     $('#st' + state).fadeIn('slow', function(){
@@ -117,8 +179,8 @@ function runState(){
 }
 function nextState() {
     if (state < states.length-1) {
-        state ++;
-        $('.state').fadeOut('slow', function(){
+        $('#st' + state).fadeOut('slow', function(){
+            state ++;
             runState()
         });
     }
@@ -126,8 +188,9 @@ function nextState() {
 
 function prevState() {
     if (state > 0) {
-        state --;
-        $('.state').fadeOut('slow', function(){
+
+        $('#st' + state).fadeOut('slow', function(){
+            state --;
             runState();
         });
     }
