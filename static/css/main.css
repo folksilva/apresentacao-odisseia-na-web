@@ -47,6 +47,19 @@
   from {
     background-position: bottom right; } }
 
+@-webkit-keyframes decolagem {
+  from {
+    -webkit-transform: rotate(0deg) translate(0, 0); }
+
+  25% {
+    -webkit-transform: rotate(3deg) translate(0, -2px); }
+
+  75% {
+    -webkit-transform: rotate(-3deg) translate(2px, 0); }
+
+  to {
+    -webkit-transform: rotate(0deg) translate(2px, -2px); } }
+
 body {
   background: #000;
   color: #fff;
@@ -74,3 +87,94 @@ body {
 
 .centered {
   text-align: center; }
+
+button {
+  font-family: Lato;
+  font-size: 2rem;
+  display: inline-block;
+  width: 300px;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #97c4fe;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
+  border: 1px solid #337fed;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  -webkit-transition: all 1s linear; }
+
+button:hover {
+  box-shadow: 0 0 2rem #337fed;
+  -webkit-transition: all 1s linear; }
+
+button:active {
+  box-shadow: 0 0 4rem #97c4fe;
+  -webkit-transform: translate(2px, 2px);
+  -webkit-transition: all 1s linear; }
+
+#stars {
+  display: none; }
+
+#pre {
+  font-family: Lato;
+  font-size: 2rem;
+  font-weight: 300; }
+  #pre input {
+    font-family: Lato;
+    font-size: 2rem;
+    font-weight: 300;
+    display: inline-block;
+    width: 60%;
+    margin: 2rem 0; }
+
+#in p {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 40%; }
+
+#countdown {
+  text-align: center;
+  padding: 5rem;
+  font-family: Lato;
+  font-size: 3rem; }
+
+#travel {
+  text-align: center;
+  padding: 4rem;
+  background-color: #000;
+  font-family: Lato;
+  font-size: 2rem;
+  font-weight: 300; }
+  #travel div {
+    -webkit-animation: decolagem 200ms linear infinite alternate; }
+
+#window {
+  background-image: url("../img/aluminium.jpg");
+  background-size: cover; }
+  #window #content {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: -2px -2px 4px #666, 2px 2px 4px #eee; }
+  #window .screen-off {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: #333;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #666666), color-stop(100%, #333333));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #666666 0%, #333333 100%);
+    /* Chrome10+,Safari5.1+ */
+    border-radius: 8px; }
+
+#end {
+  background-color: #000000;
+  background-image: url("../img/hastalavista.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }

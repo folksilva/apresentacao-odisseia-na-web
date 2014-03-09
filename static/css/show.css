@@ -47,6 +47,19 @@
   from {
     background-position: bottom right; } }
 
+@-webkit-keyframes decolagem {
+  from {
+    -webkit-transform: rotate(0deg) translate(0, 0); }
+
+  25% {
+    -webkit-transform: rotate(3deg) translate(0, -2px); }
+
+  75% {
+    -webkit-transform: rotate(-3deg) translate(2px, 0); }
+
+  to {
+    -webkit-transform: rotate(0deg) translate(2px, -2px); } }
+
 body {
   background: #000;
   color: #fff;
@@ -456,3 +469,98 @@ body {
     background-position: center;
     -webkit-animation: social 10s ease-in-out infinite alternate;
     display: none; }
+
+#st18 {
+  background-image: url("../img/futuro.jpg");
+  background-size: cover; }
+  #st18 h1 {
+    position: absolute;
+    font-size: 8rem;
+    text-align: left;
+    width: 650px;
+    right: 100px;
+    top: 650px;
+    line-height: 7rem;
+    display: none; }
+    #st18 h1 div {
+      display: none;
+      text-align: right;
+      font-size: 3rem;
+      line-height: 3rem;
+      font-style: italic; }
+
+#st19 {
+  background-color: #ffffff;
+  background-image: url("../img/semantica.png");
+  background-repeat: no-repeat;
+  background-position: right -100%;
+  background-size: 50rem auto;
+  color: #222222;
+  padding: 0 50rem 0 4rem;
+  -webkit-transition: all 3s linear; }
+  #st19 h3, #st19 p {
+    display: none; }
+
+#st19.on {
+  background-position: right center;
+  -webkit-transition: all 3s linear; }
+
+#st20 {
+  background-color: #ffffff;
+  background-image: url("../img/things.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  color: #222222;
+  padding: 0 4rem; }
+  #st20 #p4 {
+    margin-right: 23rem; }
+  #st20 h1, #st20 p {
+    display: none; }
+
+#st21 {
+  background-color: #000000;
+  padding: 0 50rem 0 4rem; }
+  #st21 h1, #st21 p {
+    display: none; }
+  #st21 .terminator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 50rem;
+    background-image: url("../img/terminator.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    -webkit-transform: translate(0, 200px);
+    -webkit-filter: brightness(0.1) contrast(1.4) opacity(0);
+    -webkit-transition: all 10s linear; }
+  #st21 .terminator.on {
+    -webkit-transform: translate(0, 0);
+    -webkit-filter: brightness(0.8) contrast(1.1) opacity(1);
+    -webkit-transition: all 10s linear; }
+
+#st22 h1 {
+  font-family: Lato;
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 300;
+  display: none; }
+#st22 #pessoa {
+  font-family: Lato;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  display: none; }
+
+#st23 {
+  background-color: #000000;
+  background-image: url("../img/hastalavista.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }

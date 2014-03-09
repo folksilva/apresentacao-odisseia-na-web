@@ -46,6 +46,15 @@ var handlers = {
         if (viewersCount < 8) {
             $('#startMessage').text('Aguardando embarque da tripulação');
         }
+    },
+    'VIEWER_QUESTION': function(d) {
+        $('#st22 #pessoa').hide();
+        console.log('Pergunta de ' + d.name + '!');
+        $('#st22 #pessoa').text(d.name.toUpperCase()).fadeIn(3*1000, function() {
+            setTimeout(function() {
+                $('#st22 #pessoa').fadeOut(3*1000);
+            }, 5*1000);
+        });
     }
 };
 
@@ -310,20 +319,79 @@ function state17 () {
 }
 
 function state18 () {
-
+    $('#st18 h1').fadeIn(3*1000, function(){
+        $('#st18 h1 div').fadeIn(2*1000, function(){
+            setTimeout(function(){
+                $('#st18 h1').fadeOut(2*1000, function(){
+                    nextState();
+                });
+            }, 5 * 1000);
+        });
+    });
 }
 function state19 () {
-
+    $('#st19 h3').fadeIn(3*1000, function () {
+        setTimeout(function () {
+            $('#st19 #p1').fadeIn(1*1000, function () {
+                setTimeout(function () {
+                    $('#st19 #p2').fadeIn(1*1000, function () {
+                        setTimeout(function () {
+                            $('#st19 #p3').fadeIn(1*1000, function () {
+                                setTimeout(function () {
+                                    $('#st19 #p4').fadeIn(1*1000, function () {
+                                        setTimeout(function(){
+                                            $('#st19').addClass('on');
+                                        }, 4*1000);
+                                    });
+                                }, 3*1000);
+                            });
+                        }, 3*1000);
+                    });
+                }, 3*1000);
+            });
+        }, 1*1000);
+    });
 }
 function state20 () {
-
+    $('#st20 h1').fadeIn(3*1000, function () {
+        setTimeout(function () {
+            $('#st20 #p1').fadeIn(1*1000, function () {
+                setTimeout(function () {
+                    $('#st20 #p2').fadeIn(1*1000, function () {
+                        setTimeout(function () {
+                            $('#st20 #p3').fadeIn(1*1000, function () {
+                                setTimeout(function () {
+                                    $('#st20 #p4').fadeIn(1*1000);
+                                }, 5*1000);
+                            });
+                        }, 3*1000);
+                    });
+                }, 3*1000);
+            });
+        }, 1*1000);
+    });
 }
 function state21 () {
-
+    $('#st21 h1').fadeIn(3*1000, function () {
+        setTimeout(function () {
+            $('#st21 #p1').fadeIn(1*1000, function () {
+                setTimeout(function () {
+                    $('#st21 #p2').fadeIn(1*1000, function () {
+                        setTimeout(function () {
+                            $('#st21 .terminator').addClass('on');
+                            $('#st21 #p3').fadeIn(1*1000);
+                        }, 3*1000);
+                    });
+                }, 3*1000);
+            });
+        }, 1*1000);
+    });
 }
 
 function state22 () {
-
+    $('#stars').fadeIn(6*1000, function () {
+        $('#st22 h1').fadeIn(3*1000);
+    });
 }
 
 /**
@@ -335,7 +403,7 @@ var states = [null, state1, state2, state3,
     state9, state10, state11, state12,
     state13, state14, state15, state16, state17,
     state18, state19, state20, state21,
-    state22];
+    state22, voidfn];
 function runState(){
     ws.send(state);
     $('#st' + state).fadeIn('slow', function(){
@@ -391,7 +459,7 @@ function bootstrap(){
  */
 function startup(){
     $('#stars').fadeIn(1700, function(){
-        state = 17;
+        state = 1;
         runState();
     });
     $(document).bind('keydown', function(e){

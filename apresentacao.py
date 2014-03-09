@@ -70,7 +70,8 @@ class Socket(tornado.websocket.WebSocketHandler):
             PRESENTER.write_message(jsonify(evt='VIEWER_OPENED', name=self.viewer_name))
 
     def on_message(self, message):
-        pass
+        print(self.viewer_name, message)
+        PRESENTER.write_message(jsonify(evt='VIEWER_QUESTION', name=self.viewer_name))
 
     def on_close(self):
         if self in VIEWERS:
