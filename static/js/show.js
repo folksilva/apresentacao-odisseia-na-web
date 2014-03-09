@@ -160,9 +160,119 @@ function state9 () {
         }, 5 * 1000);
     });
 }
-function state10 () {}
-function state11 () {}
-function state12 () {}
+function state10 () {
+    $('#st10 h1').fadeIn(2*1000, function(){
+        setTimeout(function() {
+            $('#st10 #p1').addClass('on');
+            setTimeout(function() {
+                $('#st10 #p2').addClass('on');
+                setTimeout(function(){$('#st10').addClass('on');}, 3*1000);
+                setTimeout(function(){$('#st10 #p3').addClass('on');}, 6*1000);
+            }, 8*1000);
+        }, 2*1000);
+    });
+}
+function state11 () {
+    $('#st11 h3').fadeIn(2*1000, function(){
+       setTimeout(function(){
+           $('#st11 #p1').fadeIn('slow', function(){
+               setTimeout(function(){
+                   $('#st11').css('-webkit-animation', 'netscape-in 3s linear');
+                   $('#st11 #p2').fadeIn('slow', function(){
+                       $('#st11').addClass('on');
+                       setTimeout(function(){
+                           $('#st11 #p3').fadeIn('slow', function(){
+                               setTimeout(function(){
+                                   $('#st11 #p4').fadeIn('slow', function(){
+                                       $('#st11').removeClass('on');
+                                       $('#st11').css('-webkit-animation', 'netscape-out 1s linear');
+                                       setTimeout(function(){
+                                           $('#st11').addClass('browsers');
+                                           $('#st11').css('-webkit-animation', 'netscape-in 1s linear');
+                                           setTimeout(function(){
+                                               $('#st11').addClass('on');
+                                               setTimeout(function() {
+                                                   $('#st11').css('background-image', 'url(static/img/browsers2.png)');
+                                               }, 4*1000)
+                                           }, 1*1000);
+                                       }, 1*1000);
+                                   });
+                               }, 3 * 1000);
+                           });
+                       }, 3 * 1000);
+                   });
+               }, 3 * 1000);
+           });
+       }, 2 * 1000);
+    });
+}
+function state12 () {
+    $('#st12 h1').fadeIn(2*1000, function(){
+        setTimeout(function() {
+            $('#st12 #p1').addClass('on');
+            setTimeout(function() {
+                $('#st12 #p2').addClass('on');
+                setTimeout(function(){$('#st12 #p3').addClass('on');}, 4*1000);
+            }, 6*1000);
+        }, 2*1000);
+    });
+}
+
+function state13 () {
+    $('#st13 h1').fadeIn(3*1000, function(){
+        setTimeout(function(){
+            $('#st13 h1').fadeOut(2*1000, function(){
+                nextState();
+            });
+        }, 5 * 1000);
+    });
+}
+function state14 () {
+    $('#st14 h1').fadeIn(3*1000, function () {
+       setTimeout(function(){
+           $('#st14').addClass('on');
+           $('#st14 #p1').fadeIn(2*1000, function(){
+                setTimeout(function() {
+                    $('#st14 #p2').fadeIn(2*1000, function(){
+                        setTimeout(function() {
+                            $('#st14 #p3').fadeIn(2*1000, function(){
+                                setTimeout(function() {
+                                    $('#st14 .quote').fadeIn(1*1000);
+                                }, 2*1000);
+                           });
+                        }, 2*1000);
+                   });
+                }, 2*1000);
+           });
+       })
+    });
+}
+function state15 () {
+
+}
+function state16 () {
+
+}
+function state17 () {
+
+}
+
+function state18 () {
+
+}
+function state19 () {
+
+}
+function state20 () {
+
+}
+function state21 () {
+
+}
+
+function state22 () {
+
+}
 
 /**
  * Lista de estados com ações a serem executadas
@@ -170,7 +280,10 @@ function state12 () {}
  */
 var states = [null, state1, state2, state3,
     state4, state5, state6, state7, voidfn,
-    state9, state10, state11, state12];
+    state9, state10, state11, state12,
+    state13, state14, state15, state16, state17,
+    state18, state19, state20, state21,
+    state22];
 function runState(){
     ws.send(state);
     $('#st' + state).fadeIn('slow', function(){
@@ -226,7 +339,7 @@ function bootstrap(){
  */
 function startup(){
     $('#stars').fadeIn(1700, function(){
-        state = 1;
+        state = 15;
         runState();
     });
     $(document).bind('keydown', function(e){

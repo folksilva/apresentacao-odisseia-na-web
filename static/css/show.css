@@ -26,6 +26,20 @@
   to {
     top: 150%; } }
 
+@-webkit-keyframes netscape-in {
+  from {
+    background-position: center 150%; }
+
+  to {
+    background-position: center bottom; } }
+
+@-webkit-keyframes netscape-out {
+  from {
+    background-position: center bottom; }
+
+  to {
+    background-position: center 150%; } }
+
 body {
   background: #000;
   color: #fff;
@@ -216,9 +230,11 @@ body {
   padding: 40px; }
 
 #st9 {
-  background-image: url("../img/www.jpg");
+  background-color: #000000;
+  background-image: url("../img/evolution.jpg");
   background-position: center bottom;
-  background-size: cover; }
+  background-size: contain;
+  background-repeat: no-repeat; }
   #st9 h1 {
     position: absolute;
     font-size: 4rem;
@@ -227,3 +243,154 @@ body {
     top: 20px;
     word-spacing: 2rem;
     display: none; }
+
+#st10 {
+  background-color: #ffffff;
+  color: #222222;
+  padding: 0 4rem 0 50rem; }
+  #st10 h1 {
+    display: none; }
+  #st10 p {
+    -webkit-transform: translate(100rem, 0);
+    opacity: 0;
+    -webkit-transition: all 1s linear; }
+  #st10 p.on {
+    -webkit-transform: translate(0, 0);
+    opacity: 1; }
+
+#st10:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/W3C.png");
+  background-position: 9.375rem 60%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: 31.25rem auto; }
+
+#st10.on:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/W3C.png");
+  background-position: 9.375rem center;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: 31.25rem auto;
+  -webkit-transition: all 600ms linear; }
+
+#st11 {
+  background-color: #000;
+  background-image: url("../img/netscape.jpg");
+  background-position: center 150%;
+  background-repeat: no-repeat;
+  padding: 0 5rem; }
+  #st11 h3, #st11 p {
+    display: none; }
+
+#st11.on, #st11.browsers.on {
+  background-position: center bottom; }
+
+#st11.browsers {
+  background-image: url("../img/browsers.png");
+  background-size: contain;
+  background-position: center 150%; }
+
+#st12 {
+  background-image: url("../img/bolhabg.jpg");
+  background-size: cover;
+  padding: 0 60rem 0 4rem; }
+  #st12 h1 {
+    display: none; }
+  #st12 p {
+    -webkit-transform: translate(-100rem, 0);
+    opacity: 0;
+    -webkit-transition: all 1s linear; }
+  #st12 p.on {
+    -webkit-transform: translate(0, 0);
+    opacity: 1; }
+
+#st13 {
+  background-color: #000000;
+  background-image: url("../img/hoje.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #st13 h1 {
+    position: absolute;
+    font-size: 4rem;
+    text-align: center;
+    width: 60px;
+    right: 360px;
+    top: 500px;
+    line-height: 5rem;
+    display: none; }
+
+#st14 {
+  background-color: #ffffff;
+  color: #222222;
+  padding: 0 50rem 0 4rem; }
+  #st14 h1, #st14 p {
+    display: none; }
+  #st14 .quote {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 720px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-align: justify;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    font-style: italic; }
+    #st14 .quote div {
+      margin: 6rem; }
+      #st14 .quote div small {
+        margin-top: 4rem;
+        display: block;
+        font-style: normal;
+        font-size: 1.6rem;
+        float: right; }
+
+#st14:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/timoreilly.jpg");
+  background-position: 160% center;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  -webkit-transition: all 2s linear; }
+
+#st14.on:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/timoreilly.jpg");
+  background-position: right center;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  -webkit-transition: all 2s linear; }
+
+#st15 {
+  background-color: #747474;
+  background-image: url("../img/webapps.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  padding: 0 4rem; }

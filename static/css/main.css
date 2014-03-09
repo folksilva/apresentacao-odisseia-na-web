@@ -26,6 +26,20 @@
   to {
     top: 150%; } }
 
+@-webkit-keyframes netscape-in {
+  from {
+    background-position: center 150%; }
+
+  to {
+    background-position: center bottom; } }
+
+@-webkit-keyframes netscape-out {
+  from {
+    background-position: center bottom; }
+
+  to {
+    background-position: center 150%; } }
+
 body {
   background: #000;
   color: #fff;
