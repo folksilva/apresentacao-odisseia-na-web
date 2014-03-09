@@ -40,6 +40,13 @@
   to {
     background-position: center 150%; } }
 
+@-webkit-keyframes social {
+  from {
+    background-position: top left; }
+
+  from {
+    background-position: bottom right; } }
+
 body {
   background: #000;
   color: #fff;

@@ -248,13 +248,65 @@ function state14 () {
     });
 }
 function state15 () {
-
+    $('#st15 h1').fadeIn(3*1000, function () {
+       setTimeout(function(){
+           $('#st15 #p1').addClass('on');
+           setTimeout(function(){
+               $('#st15 #p2').addClass('on');
+               setTimeout(function(){
+                   $('#st15 #p3').addClass('on');
+                   setTimeout(function(){
+                       $('#st15 #p4').addClass('on');
+                       setTimeout(function(){
+                           $('#st15').addClass('on');
+                       }, 600);
+                   }, 4*1000);
+               }, 3*1000);
+           }, 3*1000);
+       }, 1*1000);
+    });
 }
 function state16 () {
-
+    $('#st16 h1').fadeIn(3*1000, function () {
+       setTimeout(function() {
+           $('#st16 #p1').addClass('on');
+           setTimeout(function() {
+               $('#st16 #p2').addClass('on');
+               setTimeout(function() {
+                   $('#st16 #p3').addClass('on');
+                   setTimeout(function() {
+                       $('#st16 #p4').addClass('on');
+                       setTimeout(function() {
+                           $('#st16 #p5').addClass('on');
+                       }, 5*1000);
+                   }, 3*1000);
+               }, 5*1000);
+           }, 3*1000);
+       }, 1*1000);
+    });
 }
 function state17 () {
-
+    $('#st17 h1').fadeIn(3*1000, function () {
+        setTimeout(function () {
+            $('#st17 #p1').fadeIn(1*1000, function () {
+                setTimeout(function () {
+                    $('#st17 #p2').fadeIn(1*1000, function () {
+                        setTimeout(function () {
+                            $('#st17 #p3').fadeIn(1*1000, function () {
+                                setTimeout(function () {
+                                    $('#st17 #p4').fadeIn(1*1000, function () {
+                                        setTimeout(function () {
+                                            $('#st17 .networks').fadeIn(3*1000);
+                                        }, 6*1000);
+                                    });
+                                }, 3*1000);
+                            });
+                        }, 3*1000);
+                    });
+                }, 3*1000);
+            });
+        }, 1*1000);
+    });
 }
 
 function state18 () {
@@ -339,7 +391,7 @@ function bootstrap(){
  */
 function startup(){
     $('#stars').fadeIn(1700, function(){
-        state = 15;
+        state = 17;
         runState();
     });
     $(document).bind('keydown', function(e){

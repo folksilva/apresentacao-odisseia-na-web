@@ -347,10 +347,68 @@
   background-size: auto 100%;
   -webkit-transition: all 2s linear;
 }
+
 #st15 {
   background-color: #747474;
   background-image: url('../img/webapps.png');
-  background-position: bottom center;
+  background-position: center 200%;
   background-repeat: no-repeat;
   padding: 0 4rem;
+  -webkit-transition: all 2s linear;
+  h1 { display: none; }
+  p {
+    -webkit-transform: translate(0, 100px);
+    opacity: 0;
+    -webkit-transition: all 1s linear;
+  }
+  p.on {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+    -webkit-transition: all 1s linear;
+  }
+}
+#st15.on {
+  -webkit-transition: all 2s linear;
+  background-position: bottom center;
+}
+
+#st16 {
+  background-image: url('../img/clouds.jpg');
+  background-size: cover;
+  color: darken(#8DBBD2, 40);
+  text-shadow: 0 2px 3px white, 0 -2px 3px white, -2px 0 3px white, 2px 0 3px white;
+  padding: 0 4rem;
+  h1 { display: none; }
+  p {
+    -webkit-filter: blur(30px);
+    opacity: 0;
+    -webkit-transition: all 1s linear;
+  }
+  p.on {
+    -webkit-filter: blur(0px);
+    opacity: 1;
+    -webkit-transition: all 1s linear;
+  }
+}
+
+#st17 {
+  background-color: #ffffff;
+  background-image: url('../img/friends.jpg');
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  color: #222222;
+  text-shadow: 0 2px 3px white, 0 -2px 3px white, -2px 0 3px white, 2px 0 3px white;
+  padding: 0 4rem;
+  h1, p { display: none; }
+  .networks {
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    background-image: url('../img/socialnetworks.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-animation: social 10s ease-in-out infinite alternate;
+    display: none;
+  }
 }
